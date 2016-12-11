@@ -3,6 +3,7 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use App\Http\Controllers\CsvConverterController;
+
 class SurveyTest extends TestCase
 {
     /**
@@ -36,17 +37,17 @@ class SurveyTest extends TestCase
      */
     public function surveyAddTests()
     {
-        $this->visit('survey')
-            ->type('Ujwal Dhakal', 'Name')
-            ->type('kevin.ujwal@gmail.com', 'Email')
-            ->select('male', 'Gender')
-            ->type('9840058278', 'Number')
-            ->type('Lagan Tole', 'Address')
-            ->type('02-07-1996', 'Date_of_birth')
-            ->type('bachelor 4th year', 'Education_background')
-            ->select('email', 'Mode_of_contact')
-            ->type('hindu', 'Nationality')
-            ->press('Submit')
+        $this->visit('survey/form')
+            ->type('Ujwal Dhakal', 'name')
+            ->type('kevin.ujwal@gmail.com', 'email')
+            ->select('male', 'gender')
+            ->type('9840058278', 'phone')
+            ->type('Lagan Tole', 'address')
+            ->type('02-07-1996', 'dob')
+            ->type('bachelor 4th year', 'education')
+            ->select('email', 'contact_mode')
+            ->type('hindu', 'nationality')
+            ->press('All Religion')
             ->seePageIs('/survey');
     }
 }
