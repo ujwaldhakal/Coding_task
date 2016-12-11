@@ -49,4 +49,37 @@ class SurveyController extends Controller
         Session::flash('success','Data has been successfully inserted');
         return redirect()->back();
     }
+
+    /**
+     * Detail survey based on id
+     * @param string $email
+     */
+    public function detail($email)
+    {
+        $survey = new Survey();
+        $csvController = new CsvGenerator($survey);
+        $csvDatas = $csvController->readCsv();
+        $key = '';
+        if($csvDatas[1][0] !== null) {
+            $counter = 0;
+            foreach($csvDatas as $csvData) {
+                if($counter == 0)
+                {
+                    $key = array_search('Email', $csvData);
+
+                }
+                else {
+                    if ($csvData[$key] == $email) {
+                        $fillable = $survey->getFillable();
+                        return view('survey.detail')->with(['csvData' => $csvData ,'fillable' => $fillable]);
+                    } else {
+                        return response('Details not found');
+                    }
+                }
+                $counter++;
+            }
+        } else {
+            dd('not found');
+        }
+    }
 }

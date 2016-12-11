@@ -8,6 +8,7 @@
        @foreach($surveyList['0'] as $title)
            <th>{{$title}}</th>
            @endforeach
+           <th>Action</th>
         </tr>
         </thead>
         <tfoot>
@@ -15,6 +16,7 @@
             @foreach($surveyList['0'] as $title)
                 <th>{{$title}}</th>
             @endforeach
+            <th>Action</th>
             <?php unset($surveyList['0'])?>
         </tr>
         <tbody>
@@ -30,6 +32,7 @@
             <td>{{$list[6]}}</td>
             <td>{{$list[7]}}</td>
             <td>{{$list[8]}}</td>
+            <td><a href="{{route('surveyDetail',$list['3'])}}">View Details</a></td>
 
         </tr>
         @endforeach

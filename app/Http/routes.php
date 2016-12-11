@@ -15,5 +15,6 @@ Route::get('/',['uses' => 'SurveyController@index','as' => 'surveyList']);
 
 Route::group(['prefix' => 'survey'],function(){
     Route::get('form',['uses' => 'SurveyController@form','as' => 'surveyForm']);
+    Route::get('detail/{email}',['uses' => 'SurveyController@detail','as' => 'surveyDetail']);
     Route::post('save',['uses' => 'SurveyController@save','as' => 'saveSurvey']);
 });
