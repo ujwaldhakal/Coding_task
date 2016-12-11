@@ -57,8 +57,8 @@ class SurveyController extends Controller
     public function detail($email)
     {
         $survey = new Survey();
-        $csvController = new CsvGenerator($survey);
-        $csvDatas = $csvController->readCsv();
+        $csvGenerator = new CsvGenerator($survey);
+        $csvDatas = $csvGenerator->readCsv();
         $key = '';
         if($csvDatas[1][0] !== null) {
             $counter = 0;
