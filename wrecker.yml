@@ -1,5 +1,5 @@
 box:
-        id: ujwaldhakal/laravel
+        id: tedslittlerobot/homestead@0.0.2
         cmd: /bin/sh
 
         build:
