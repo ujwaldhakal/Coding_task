@@ -16,4 +16,4 @@ A simple project built using laravel 5.2 framework which saves the survey data t
 * phpunit SurveyTest.php
 
 #Authors
-Ujwal Dhakal - initial auther
+Ujwal Dhakal - initial author
