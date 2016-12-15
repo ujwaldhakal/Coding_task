@@ -2,6 +2,7 @@
 [![Code Climate](https://codeclimate.com/github/ujwaldhakal/coding_task/badges/gpa.svg)](https://codeclimate.com/github/ujwaldhakal/coding_task)
 [![Test Coverage](https://codeclimate.com/github/ujwaldhakal/coding_task/badges/coverage.svg)](https://codeclimate.com/github/ujwaldhakal/coding_task/coverage)
 [![Issue Count](https://codeclimate.com/github/ujwaldhakal/coding_task/badges/issue_count.svg)](https://codeclimate.com/github/ujwaldhakal/coding_task)
+[![Build Status](https://travis-ci.org/ujwaldhakal/Coding_task.svg?branch=master)](https://travis-ci.org/ujwaldhakal/Coding_task)
 
 This is simple crud coding_task web application made in laravel 5.2 
 
