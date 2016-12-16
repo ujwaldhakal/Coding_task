@@ -11,7 +11,7 @@ class SurveyTest extends TestCase
      *
      * @return void
      */
-    public function surveyIndexTests()
+    public function testSurveyIndex()
     {
         $this->visit('/')
             ->see('Survey');
@@ -20,7 +20,7 @@ class SurveyTest extends TestCase
      * Checking detail page
      * @return void
      */
-    public function surveyDetailTests()
+    public function testSurveyDetail()
     {
         $csvController = new CsvConverterController;
         $filePath = storage_path($csvController::file);
@@ -35,7 +35,7 @@ class SurveyTest extends TestCase
      * Checking add page
      * @return void
      */
-    public function surveyAddTests()
+    public function testSurveyAdd()
     {
         $this->visit('survey/form')
             ->type('Ujwal Dhakal', 'name')
