@@ -25,4 +25,9 @@ class ExampleTest extends TestCase
             ->press('submit')
             ->seePageIs('/survey/form');
     }
+
+    public function testAsd()
+    {
+        $this->visit('/')->see('Survey 2016');
+    }
 }

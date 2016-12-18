@@ -1,8 +1,6 @@
 <html>
 <head>
-    <title>
-        Survey 2016
-    </title>
+    <title>Survey 2016</title>
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}"/>
     @stack('styles')
 </head>
