@@ -1,8 +1,7 @@
 box: php   
 build:
   steps:
-    - install-packages:
-        packages: git
+
     - script:
         name: install phpunit
         code: |-
@@ -15,5 +14,5 @@ build:
         name: install dependencies
         code: composer update --no-scripts
     - script:
-        name: PHPUnit integration tests
-        code: phpunit --configuration phpunit.xml
+        name: PHPUnit tests
+        code: phpunit
