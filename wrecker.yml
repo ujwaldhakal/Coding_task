@@ -1,6 +1,5 @@
 box:
-        id: geshan/alpine
-        cmd: /bin/sh
+        id: wercker/php
 
         build:
         steps:
