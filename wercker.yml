@@ -1,7 +1,8 @@
-box: php   
+box: php
 build:
   steps:
-
+    - install-packages:
+        packages: git
     - script:
         name: install phpunit
         code: |-
@@ -12,5 +13,7 @@ build:
         code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     - script:
         name: install dependencies
-        code: composer update --no-scripts
-
+        code: composer install --no-interaction
+    - script:
+        name: PHPUnit integration tests
+        code: phpunit --configuration phpunit.xml
