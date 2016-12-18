@@ -1,5 +1,5 @@
 box:
-        id: ujwaldhakal/laravel
+        id: geshan/alpine
         cmd: /bin/sh
 
         build:
@@ -9,10 +9,8 @@ box:
         code: export COMPOSER_CACHE_DIR="$WERCKER_CACHE_DIR/composer" && mkdir -p $COMPOSER_CACHE_DIR
         - script:
         name: updating composer
-        code: composer update
+        code: composer update --no-scripts
         -script:
         name: Autoloading the classes
         code: compose dump-autoload
-        -script:
-        name: Checking for the test execution
-        code: cd tests;phpunit SurveyTest.php
+   
