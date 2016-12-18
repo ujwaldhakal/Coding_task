@@ -13,6 +13,4 @@ build:
     - script:
         name: install dependencies
         code: composer update --no-scripts
-    - script:
-        name: PHPUnit tests
-        code: phpunit
+
