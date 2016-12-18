@@ -1,7 +1,4 @@
-box:
-        id: geshan/alpine
-        cmd: /bin/sh
-
+box: geshan/alpine
         build:  
         steps:
         - script:
