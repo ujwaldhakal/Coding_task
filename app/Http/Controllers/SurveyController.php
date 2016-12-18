@@ -54,7 +54,8 @@ class SurveyController extends Controller
      * Detail survey based on id
      * @param string $email
      */
-    public function detail($email)
+
+        public function detail($email)
     {
         $survey = new Survey();
         $csvGenerator = new CsvGenerator($survey);
@@ -68,18 +69,19 @@ class SurveyController extends Controller
                     $key = array_search('Email', $csvData);
 
                 }
-                else {
+               
                     if ($csvData[$key] == $email) {
                         $fillable = $survey->getFillable();
                         return view('survey.detail')->with(['csvData' => $csvData ,'fillable' => $fillable]);
-                    } else {
-                        return response('Details not found');
                     }
-                }
+                
                 $counter++;
             }
+            dd('not found');
         } else {
             dd('not found');
         }
-    }
+   
+     }
+    
 }
