@@ -3,14 +3,14 @@ box:
         cmd: /bin/sh
 
         build:
-        steps:
+     
 
         - script:
         name: Updating the app
         code: composer update --no-scripts
-        -script:
+        - script:
         name: Autoloading the classes
         code: compose dump-autoload
-        -script:
+        - script:
         name: Checking for the test execution
         code: cd tests;phpunit SurveyTest.php
