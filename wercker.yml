@@ -1,4 +1,4 @@
-box: geshan/alpine
+box: wercker/php
         build:  
         steps:
         - script:
