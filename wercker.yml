@@ -3,6 +3,7 @@ box:
         cmd: /bin/sh
 
         build:  
+        steps:
         - script:
         name: Autoloading the classes
         code: compose dump-autoload
