@@ -1,8 +1,13 @@
-box: geshan/alpine
+box: wercker/php
 build:
   steps:
     - script:
-        name: echo PHP information
+        name: install dependencies
         code: |-
-            php -v
-            php -i
+            composer install --no-interaction
+    - script:
+        name: Serve application
+        code: php -S localhost:8000 >> /dev/null &
+    - script:
+        name: PHPUnit integration tests
+        code: phpunit --configuration phpunit.xml
