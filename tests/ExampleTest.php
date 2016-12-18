@@ -7,13 +7,22 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class ExampleTest extends TestCase
 {
     /**
-     * A basic functional test example.
-     *
+     * Checking add page
      * @return void
      */
-    public function testBasicExample()
+    public function testSurveyAdd()
     {
-        $this->visit('/')
-             ->see('Laravel 5');
+        $this->visit('/survey/form')
+            ->type('Ujwal Dhakal', 'name')
+            ->type('kevin.ujwal@gmail.com', 'email')
+            ->select('m', 'gender')
+            ->type('9840058278', 'phone')
+            ->type('Lagan Tole', 'address')
+            ->type('02-07-1996', 'dob')
+            ->type('bachelor 4th year', 'education')
+            ->select('Email', 'contact_mode')
+            ->type('hindu', 'nationality')
+            ->press('submit')
+            ->seePageIs('/survey/form');
     }
 }
