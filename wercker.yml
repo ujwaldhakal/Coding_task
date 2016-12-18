@@ -1,7 +1,8 @@
 box: wercker/php
-        build:  
-        steps:
-        - script:
-        name: Autoloading the classes
-        code: compose dump-autoload
-
+build:
+  steps:
+    - script:
+        name: echo PHP information
+        code: |-
+            php -v
+            php -i
