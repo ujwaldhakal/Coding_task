@@ -4,9 +4,7 @@ box:
 
         build:
         steps:
-        - script:
-        name: cache composer dependencies
-        code: export COMPOSER_CACHE_DIR="$WERCKER_CACHE_DIR/composer" && mkdir -p $COMPOSER_CACHE_DIR
+
         - script:
         name: Updating the app
         code: composer update --no-scripts
