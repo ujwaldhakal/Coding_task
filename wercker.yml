@@ -1,17 +1,4 @@
-box: php
-dev:
-  steps:
-    - install-packages:
-        packages: git
-    - script:
-        name: install composer
-        code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-    - script:
-        name: install dependencies
-        code: composer install --no-interaction
-    - internal/watch:
-        code: php -S 0.0.0.0:8000
-        reload: true
+box: php   
 build:
   steps:
     - install-packages:
@@ -26,10 +13,7 @@ build:
         code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
     - script:
         name: install dependencies
-        code: composer install --no-interaction
-    - script:
-        name: Serve application
-        code: php -S localhost:8000 >> /dev/null &
+        code: composer update --no-scripts
     - script:
         name: PHPUnit integration tests
         code: phpunit --configuration phpunit.xml
