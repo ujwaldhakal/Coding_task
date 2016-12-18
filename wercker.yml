@@ -1,9 +1,8 @@
 box:
-        id: ujwaldhakal/laravel
+        id: dxxczxczxczxczxc/laravel
         cmd: /bin/sh
 
-        build:
-     
+        build:   
 
         - script:
         name: Updating the app
