@@ -1,4 +1,4 @@
-box: geshan/laravel-alpine
+box: geshan/php-composer-alpine
 build:
   steps:
     - install-packages:
