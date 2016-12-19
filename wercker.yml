@@ -1,4 +1,4 @@
-box: php
+box: ujwaldhakal/testfacility
 build:
   steps:
     - install-packages:
