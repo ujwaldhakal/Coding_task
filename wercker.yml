@@ -1,4 +1,4 @@
-box: ubuntu
+box: geshan/laravel-alpine
 build:
   steps:
     - install-packages:
