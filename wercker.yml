@@ -1,4 +1,4 @@
-box: ujwaldhakal/testfacility
+box: ubuntu
 build:
   steps:
     - install-packages:
