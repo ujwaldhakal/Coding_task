@@ -42,6 +42,11 @@ class SurveyController extends Controller
         
     }
 
+    public function m_on_test2()
+    {
+        
+    }
+
     /**
      * Loads all the available data in form view
      */
