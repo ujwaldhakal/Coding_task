@@ -30,6 +30,12 @@ class SurveyController extends Controller
         
     }
 
+    public function test44()
+
+    {
+        
+    }
+
     /**
      * Loads all the available data in form view
      */
