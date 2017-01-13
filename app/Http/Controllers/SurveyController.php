@@ -24,6 +24,24 @@ class SurveyController extends Controller
         return view('survey.form')->with(['route' => $route,'listRoute' => $listRoute]);
     }
 
+    public function test()
+    {
+
+        
+    }
+
+    public function test2()
+    {
+
+
+    }
+
+    public function test22()
+    {
+
+        
+    }
+
     /**
      * Loads all the available data in form view
      */
