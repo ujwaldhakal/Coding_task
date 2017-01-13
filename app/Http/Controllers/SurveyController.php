@@ -11,6 +11,11 @@ use Session;
 
 class SurveyController extends Controller
 {
+    public function nothingMuch()
+    {
+
+        
+    }
     /**
      * Displays the survey form
      * @return view
