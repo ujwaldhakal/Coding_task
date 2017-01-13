@@ -15,7 +15,7 @@ class SurveyController extends Controller
      * Displays the survey form
      * @return view
      */
-    public function form()
+    public function form1()
     {
 
         $route = route('saveSurvey');
