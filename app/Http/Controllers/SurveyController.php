@@ -11,11 +11,16 @@ use Session;
 
 class SurveyController extends Controller
 {
+    public function nothingMuch()
+    {
+
+        
+    }
     /**
      * Displays the survey form
      * @return view
      */
-    public function form()
+    public function form3()
     {
 
         $route = route('saveSurvey');
