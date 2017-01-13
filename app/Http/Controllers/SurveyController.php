@@ -44,6 +44,12 @@ class SurveyController extends Controller
 
     public function m_on_test2()
     {
+
+    }
+
+    public function code_dhakal()
+
+    {
         
     }
 
